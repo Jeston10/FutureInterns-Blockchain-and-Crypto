@@ -1,0 +1,46 @@
+# Project-specific files
+info.md
+Info1.md
+*.md.backup
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# IDEs and editors
+/.vscode
+/.idea
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Logs
+*.log
+
+# Temporary files
+.cache
+.temp
+*.tmp
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+
+# Environment files
+.env
+.env.local
+.env*.local
+

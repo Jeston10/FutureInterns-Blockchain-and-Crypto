@@ -181,7 +181,7 @@ export function Features() {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch"
           variants={containerVariants}
           initial="initial"
           whileInView="animate"
@@ -199,8 +199,9 @@ export function Features() {
               }}
               style={{ transformStyle: "preserve-3d" }}
               data-cursor="pointer"
+              className="flex"
             >
-              <Card className="glass-card hover:shadow-2xl transition-all duration-500 h-full cursor-pointer relative overflow-hidden group">
+              <Card className="glass-card hover:shadow-2xl transition-all duration-500 w-full h-full min-h-[320px] cursor-pointer relative overflow-hidden group flex flex-col">
                 <motion.div
                   className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-100`}
                   initial={{ scale: 0, rotate: 45 }}
@@ -217,7 +218,7 @@ export function Features() {
                   transition={{ duration: 1, ease: "easeInOut" }}
                 />
 
-                <CardHeader className="relative z-10">
+                <CardHeader className="relative z-10 flex-shrink-0">
                   <motion.div
                     className="w-16 h-16 rounded-xl flex items-center justify-center mb-4 glass relative"
                     style={{ backgroundColor: `${feature.color}20` }}
@@ -253,9 +254,9 @@ export function Features() {
                   </motion.div>
                 </CardHeader>
 
-                <CardContent className="relative z-10">
+                <CardContent className="relative z-10 flex-1 flex flex-col justify-start pt-0">
                   <motion.p
-                    className="text-muted-foreground leading-relaxed"
+                    className="text-muted-foreground leading-relaxed min-h-[60px] flex items-center"
                     initial={{ opacity: 0.8 }}
                     whileHover={{ opacity: 1, x: 5 }}
                     transition={{ duration: 0.2 }}
